@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=1">
+</head>
+<body>
+    <div class="container">
+        <h1>Coin Flip Result</h1>
+        <p class="result {{ 'heads' if result == 'heads' else 'tails' }}">{{ result }}</p>
+        <form action="/" method="get">
+            <button type="submit" class="flip-button">Flip Again</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Created by Jince Sebastian</p>
+    </footer>
+</body>
+</html>
